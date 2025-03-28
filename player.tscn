@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://cknl1myfsgidb"]
+
+[ext_resource type="Script" uid="uid://cmmnwm3sx8eyl" path="res://player.gd" id="1_hqtel"]
+[ext_resource type="PackedScene" uid="uid://qqd8j0vtt6ii" path="res://bullet.tscn" id="2_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://bgassj785lps5" path="res://images/Корабль_но_пушка_выпирает_сильно1.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://citnbfu1tf103" path="res://images/Корабль_но_пушка_выпирает_сильно2.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://djyuegjfpqlol" path="res://images/Корабль_но_пушка_выпирает_сильно3.png" id="4_1jxqw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1jxqw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b26j0"]
+radius = 6.0
+height = 22.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_hqtel")
+bullet = ExtResource("2_2hs0m")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(60, 0)
+scale = Vector2(4, 4)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(40, 0)
+rotation = 1.5708
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_dw050")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+scale = Vector2(4, 4)
+shape = SubResource("CapsuleShape2D_b26j0")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
