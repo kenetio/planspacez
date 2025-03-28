@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://c24sspw40xh2"]
+
+[ext_resource type="Texture2D" uid="uid://c5tfl8bdq8jj" path="res://Фон ночной.png" id="1_vhjva"]
+[ext_resource type="Texture2D" uid="uid://befc4o82sr01q" path="res://Спрайт-0001.png" id="2_ql4rb"]
+[ext_resource type="Script" path="res://texture_button.gd" id="3_b4jm0"]
+[ext_resource type="Texture2D" uid="uid://bgsqig0i7vt0n" path="res://Настройки.png" id="4_ixidm"]
+[ext_resource type="Script" path="res://texture_button_2.gd" id="5_ql4rb"]
+[ext_resource type="Texture2D" uid="uid://c52erqeregisp" path="res://Выход.png" id="5_vhjva"]
+[ext_resource type="Script" path="res://texture_button_3.gd" id="6_ql4rb"]
+[ext_resource type="Texture2D" uid="uid://qtk1sd1pjbc1" path="res://images/Название.png" id="8_0ql6g"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ФонНочной2" type="Sprite2D" parent="."]
+position = Vector2(919, 553)
+scale = Vector2(2.20703, 2.20703)
+texture = ExtResource("1_vhjva")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 850.0
+offset_top = 455.0
+offset_right = 897.0
+offset_bottom = 477.0
+scale = Vector2(5.5, 5.5)
+texture_normal = ExtResource("2_ql4rb")
+script = ExtResource("3_b4jm0")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 830.0
+offset_top = 653.0
+offset_right = 888.0
+offset_bottom = 675.0
+scale = Vector2(5.5, 5.5)
+texture_normal = ExtResource("4_ixidm")
+texture_pressed = ExtResource("4_ixidm")
+texture_hover = ExtResource("4_ixidm")
+texture_disabled = ExtResource("4_ixidm")
+texture_focused = ExtResource("4_ixidm")
+script = ExtResource("5_ql4rb")
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+offset_left = 860.0
+offset_top = 847.0
+offset_right = 905.0
+offset_bottom = 867.0
+scale = Vector2(5.5, 5.5)
+texture_normal = ExtResource("5_vhjva")
+texture_pressed = ExtResource("5_vhjva")
+texture_hover = ExtResource("5_vhjva")
+texture_disabled = ExtResource("5_vhjva")
+texture_focused = ExtResource("5_vhjva")
+script = ExtResource("6_ql4rb")
+
+[node name="Название" type="Sprite2D" parent="."]
+position = Vector2(997, 150)
+scale = Vector2(8, 8)
+texture = ExtResource("8_0ql6g")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton2" to="TextureButton2" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton3" to="TextureButton3" method="_on_pressed"]

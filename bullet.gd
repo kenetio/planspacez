@@ -15,9 +15,8 @@ func _on_visible_on_screen_enabler_2d_screen_exited():
 
 
 func _on_body_entered(body):
-	if body.is_in_group('Enemy'):
-		body.playded()
+	if body.is_in_group('enemy'):
 		queue_free()
 		body.lives -= damage
-	elif body.is_in_group('enemshield'):
+	if body.is_in_group('planet'):
 		queue_free()

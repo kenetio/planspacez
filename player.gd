@@ -3,7 +3,7 @@ extends CharacterBody2D
 #@export var bullet : PackedScene
 @export var nspeed = 300
 @export var bullet : PackedScene
-var speed = 300
+var speed = 500
 var speedr = 10
 var target_pos = Vector2()
 var new_transform = Vector2()
@@ -29,7 +29,8 @@ func shoot():
 	canshoot = false
 	
 		
-
+func enterplanet():
+	$"..".enterplanet()
 
 func _on_timer_timeout():
 	canshoot = true

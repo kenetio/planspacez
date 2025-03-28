@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bikorwmp4trqn"]
+
+[ext_resource type="Texture2D" uid="uid://c5tfl8bdq8jj" path="res://Фон ночной.png" id="2_6pe17"]
+[ext_resource type="Texture2D" uid="uid://c4ujnic5xthw1" path="res://Фон настройки.png" id="3_5qru0"]
+[ext_resource type="Texture2D" uid="uid://cayehcxrf3dvx" path="res://прицел (2).png" id="3_gfssk"]
+[ext_resource type="Script" path="res://texture_button5.gd" id="4_gfssk"]
+[ext_resource type="Texture2D" uid="uid://dgpex288inhlb" path="res://Режим экрана.png" id="5_nxmeo"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ФонНочной" type="Sprite2D" parent="."]
+position = Vector2(936, 540)
+scale = Vector2(2.10352, 2.10352)
+texture = ExtResource("2_6pe17")
+
+[node name="ФонНастройки" type="Sprite2D" parent="."]
+position = Vector2(966, 525)
+scale = Vector2(5.5, 3.89063)
+texture = ExtResource("3_5qru0")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1103.0
+offset_top = 277.0
+offset_right = 1110.0
+offset_bottom = 284.0
+scale = Vector2(5.5, 5.5)
+texture_normal = ExtResource("3_gfssk")
+script = ExtResource("4_gfssk")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 834.0
+offset_top = 358.0
+offset_right = 883.0
+offset_bottom = 378.0
+scale = Vector2(5.5, 5.5)
+texture_normal = ExtResource("5_nxmeo")
+texture_pressed = ExtResource("5_nxmeo")
+texture_hover = ExtResource("5_nxmeo")
+texture_disabled = ExtResource("5_nxmeo")
+texture_focused = ExtResource("5_nxmeo")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

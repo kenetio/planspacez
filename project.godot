@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Planspace"
-run/main_scene="uid://p44enuo2rhry"
+run/main_scene="uid://c24sspw40xh2"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -24,6 +24,7 @@ window/size/mode=3
 [global_group]
 
 player=""
+planet=""
 
 [input]
 
