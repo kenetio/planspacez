@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://p44enuo2rhry"]
+[gd_scene load_steps=9 format=3 uid="uid://p44enuo2rhry"]
 
 [ext_resource type="Texture2D" uid="uid://dkwbemya1crni" path="res://images/Фон ночной.png" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://bidkxblix6igh" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cknl1myfsgidb" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dn5rrsupjgfbd" path="res://planet.tscn" id="3_h2yge"]
 [ext_resource type="FontFile" uid="uid://da6fep2v8siev" path="res://Silkscreen [RUS by Mr.Enot].ttf" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bwnbraxrj8u5d" path="res://enemy.tscn" id="6_7mycd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
 font = ExtResource("5_lquwl")
@@ -125,6 +126,9 @@ offset_top = 11.0
 offset_right = 1901.0
 offset_bottom = 65.0
 value = 100.0
+
+[node name="Enemy" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(-1013, 1192)
 
 [connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button2" to="." method="_on_button_2_pressed"]

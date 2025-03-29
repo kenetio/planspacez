@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://bwnbraxrj8u5d"]
+
+[ext_resource type="Script" uid="uid://vuo83fi6hr0x" path="res://enemy.gd" id="1_iifgy"]
+[ext_resource type="PackedScene" uid="uid://cag6hxhhy3jy1" path="res://enemybullet.tscn" id="2_3yqyl"]
+[ext_resource type="Texture2D" uid="uid://ioboy4betemu" path="res://images/корабль пиратов мейби1.png" id="2_epg4t"]
+[ext_resource type="Texture2D" uid="uid://ckwts1wypqgp7" path="res://images/корабль пиратов мейби2.png" id="3_3yqyl"]
+[ext_resource type="Texture2D" uid="uid://cnm5du8xcokvx" path="res://images/корабль пиратов мейби3.png" id="4_wujgv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hb8ge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_epg4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3yqyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wujgv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e1ltt"]
+radius = 13.0
+height = 104.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dxifv"]
+radius = 917.288
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iifgy"]
+radius = 577.281
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_iifgy")
+bullet = ExtResource("2_3yqyl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, 3)
+rotation = 1.5708
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_hb8ge")
+autoplay = "default"
+frame_progress = 0.4397
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_e1ltt")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dxifv")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("CircleShape2D_iifgy")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(45, 0)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_2_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

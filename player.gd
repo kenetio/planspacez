@@ -7,7 +7,6 @@ var speed = 500
 var speedr = 10
 var target_pos = Vector2()
 var new_transform = Vector2()
-var strel_transform = Vector2()
 var canshoot = true
 var lives = 100
 var quest = "none"

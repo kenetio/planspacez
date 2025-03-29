@@ -25,6 +25,7 @@ window/size/mode=3
 
 player=""
 planet=""
+enemy=""
 
 [input]
 
