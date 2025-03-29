@@ -19,8 +19,10 @@ func _physics_process(delta):
 		transform  = transform.interpolate_with(new_transform, 10 * delta)
 		if walk:
 			position = position.move_toward($"../Player".position, speed * delta)
-		if lives <= 0:
-			queue_free()
+	if lives <= 0:
+		queue_free()
+	if lives < 50:
+		active = true
 	
 	
 	move_and_slide()
@@ -37,9 +39,10 @@ func _on_area_2d_2_body_exited(body):
 		
 
 func shoot():
-	var b = bullet.instantiate()
-	get_tree().root.add_child(b)
-	b.transform = $Marker2D.global_transform
+	if active:
+		var b = bullet.instantiate()
+		get_tree().root.add_child(b)
+		b.transform = $Marker2D.global_transform
 
 func _on_timer_timeout():
 	shoot()

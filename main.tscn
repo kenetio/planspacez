@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://p44enuo2rhry"]
+[gd_scene load_steps=12 format=3 uid="uid://p44enuo2rhry"]
 
 [ext_resource type="Texture2D" uid="uid://dkwbemya1crni" path="res://images/Фон ночной.png" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://bidkxblix6igh" path="res://main.gd" id="1_1bvp3"]
@@ -6,8 +6,21 @@
 [ext_resource type="PackedScene" uid="uid://dn5rrsupjgfbd" path="res://planet.tscn" id="3_h2yge"]
 [ext_resource type="FontFile" uid="uid://da6fep2v8siev" path="res://Silkscreen [RUS by Mr.Enot].ttf" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bwnbraxrj8u5d" path="res://enemy.tscn" id="6_7mycd"]
+[ext_resource type="AudioStream" uid="uid://f14jcrg0r3j8" path="res://game musice.mp3" id="7_272bh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font = ExtResource("5_lquwl")
+font_size = 64
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_272bh"]
+font = ExtResource("5_lquwl")
+font_size = 48
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5vw27"]
 font = ExtResource("5_lquwl")
 font_size = 64
 outline_size = 16
@@ -50,6 +63,42 @@ position = Vector2(-6263, 9222)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("3_h2yge")]
 position = Vector2(-11008, -4809)
+
+[node name="Enemy" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(-1013, 1192)
+
+[node name="Enemy2" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(-1693, -885)
+
+[node name="Enemy3" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(1648, -1413)
+
+[node name="Enemy4" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(5059, 500)
+
+[node name="Enemy5" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(1852, 1022)
+
+[node name="Enemy6" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(-452, -1339)
+
+[node name="Enemy7" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(2942, -346)
+
+[node name="Enemy8" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(-2536, 322)
+
+[node name="Enemy9" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(3610, -2120)
+
+[node name="Enemy10" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(-2540, 1777)
+
+[node name="Enemy11" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(2978, 1705)
+
+[node name="Enemy12" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(380, -2621)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -108,9 +157,62 @@ text = "Империя требует: ликвидировать угрозу!
 label_settings = SubResource("LabelSettings_lquwl")
 horizontal_alignment = 1
 
+[node name="3 меню" type="Marker2D" parent="CanvasLayer/ZVDANIE"]
+position = Vector2(3220, 88)
+
+[node name="Label" type="Label" parent="CanvasLayer/ZVDANIE/3 меню"]
+offset_left = 12.0
+offset_top = 1017.0
+offset_right = 675.0
+offset_bottom = 1066.0
+text = "Мнение империи:"
+label_settings = SubResource("LabelSettings_272bh")
+
+[node name="Label2" type="Label" parent="CanvasLayer/ZVDANIE/3 меню"]
+offset_left = 520.0
+offset_top = 1016.0
+offset_right = 1183.0
+offset_bottom = 1082.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_272bh")
+
+[node name="4 меню" type="Marker2D" parent="CanvasLayer/ZVDANIE"]
+position = Vector2(-1809, -1098)
+
+[node name="Label" type="Label" parent="CanvasLayer/ZVDANIE/4 меню"]
+offset_left = 78.0
+offset_top = 245.0
+offset_right = 1884.0
+offset_bottom = 398.0
+text = "Задание выполнено, 
+и помните, империя 
+заботится о вас!"
+label_settings = SubResource("LabelSettings_5vw27")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/ZVDANIE/4 меню"]
+offset_left = 62.0
+offset_top = 424.0
+offset_right = 1868.0
+offset_bottom = 525.0
+text = "Текущая репутация империи: 0"
+label_settings = SubResource("LabelSettings_5vw27")
+horizontal_alignment = 1
+
+[node name="Buttonss" type="Button" parent="CanvasLayer/ZVDANIE/4 меню"]
+process_mode = 3
+offset_left = 776.0
+offset_top = 632.0
+offset_right = 1181.0
+offset_bottom = 725.0
+text = "Отлично"
+
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 14.0
+offset_top = 10.0
+offset_right = 277.0
+offset_bottom = 47.0
 text = "Задания:"
 label_settings = SubResource("LabelSettings_7mycd")
 
@@ -127,10 +229,12 @@ offset_right = 1901.0
 offset_bottom = 65.0
 value = 100.0
 
-[node name="Enemy" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(-1013, 1192)
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_272bh")
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="button_down" from="CanvasLayer/ZVDANIE/2 меню/Button3" to="." method="_on_button_3_button_down"]
 [connection signal="button_down" from="CanvasLayer/ZVDANIE/2 меню/Button4" to="." method="_on_button_4_button_down"]
+[connection signal="button_down" from="CanvasLayer/ZVDANIE/4 меню/Buttonss" to="." method="_on_buttonss_button_down"]

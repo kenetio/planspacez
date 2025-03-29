@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://5f0baxul83ri"]
+
+[ext_resource type="Texture2D" uid="uid://c5tfl8bdq8jj" path="res://Фон ночной.png" id="1_5b4wn"]
+[ext_resource type="Texture2D" uid="uid://cqq0ll6kkqiyg" path="res://images/Снимок экрана 2025-03-16 205533.png" id="2_lfvhc"]
+[ext_resource type="FontFile" uid="uid://da6fep2v8siev" path="res://Silkscreen [RUS by Mr.Enot].ttf" id="3_fc6k1"]
+[ext_resource type="Texture2D" uid="uid://bbdfefulwh7pb" path="res://ГОДЕН.png" id="4_lfvhc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ipp1k"]
+font = ExtResource("3_fc6k1")
+font_size = 100
+font_color = Color(1, 0, 1, 1)
+outline_size = 18
+outline_color = Color(1, 0.913725, 0, 1)
+shadow_size = 15
+shadow_color = Color(1, 0, 0, 0)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ФонНочной" type="Sprite2D" parent="."]
+position = Vector2(391, 543)
+scale = Vector2(0.982422, 2.38281)
+texture = ExtResource("1_5b4wn")
+
+[node name="ФонНочной" type="Sprite2D" parent="ФонНочной"]
+position = Vector2(782.76, 199.344)
+scale = Vector2(0.982422, 2.38281)
+texture = ExtResource("1_5b4wn")
+
+[node name="ФонНочной" type="Sprite2D" parent="ФонНочной/ФонНочной"]
+position = Vector2(708.696, -73.4679)
+scale = Vector2(0.982422, 0.500761)
+texture = ExtResource("1_5b4wn")
+
+[node name="СнимокЭкрана2025-03-16205533" type="Sprite2D" parent="."]
+position = Vector2(1409, 867.5)
+scale = Vector2(1.56654, 0.534364)
+texture = ExtResource("2_lfvhc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 322.0
+offset_top = 236.0
+offset_right = 1560.0
+offset_bottom = 313.0
+text = "GG GAME OVER VENOM"
+label_settings = SubResource("LabelSettings_ipp1k")
+
+[node name="Годен" type="Sprite2D" parent="."]
+position = Vector2(301, 816.25)
+scale = Vector2(8.23529, 50.125)
+texture = ExtResource("4_lfvhc")
