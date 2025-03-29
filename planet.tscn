@@ -1,21 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn5rrsupjgfbd"]
+[gd_scene load_steps=6 format=3 uid="uid://dn5rrsupjgfbd"]
 
 [ext_resource type="Texture2D" uid="uid://cy7rsq1un6vgu" path="res://images/сыктыфкар.png" id="1_1odxm"]
+[ext_resource type="Texture2D" uid="uid://ifapo4iqbad0" path="res://images/planet-arc'han.png" id="2_a75xc"]
 [ext_resource type="Script" uid="uid://rr23jcihcic1" path="res://planetarea.gd" id="2_mtr83"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1odxm"]
 radius = 115.251
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mtr83"]
-radius = 164.802
+radius = 154.007
 
 [node name="StaticBody2D" type="StaticBody2D" groups=["planet"]]
 scale = Vector2(4, 4)
 
 [node name="Сыктыфкар" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(4, 1)
 scale = Vector2(4, 4)
 texture = ExtResource("1_1odxm")
+
+[node name="Planet-arc\'han" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-0.25, 0)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_a75xc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1odxm")
@@ -26,4 +34,8 @@ script = ExtResource("2_mtr83")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_mtr83")
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="Area2D" method="_on_timer_timeout"]

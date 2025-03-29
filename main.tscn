@@ -1,15 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://p44enuo2rhry"]
+[gd_scene load_steps=8 format=3 uid="uid://p44enuo2rhry"]
 
 [ext_resource type="Texture2D" uid="uid://dkwbemya1crni" path="res://images/Фон ночной.png" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://bidkxblix6igh" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cknl1myfsgidb" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dn5rrsupjgfbd" path="res://planet.tscn" id="3_h2yge"]
+[ext_resource type="FontFile" uid="uid://da6fep2v8siev" path="res://Silkscreen [RUS by Mr.Enot].ttf" id="5_lquwl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font = ExtResource("5_lquwl")
+font_size = 64
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7mycd"]
+font = ExtResource("5_lquwl")
+font_size = 48
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_1bvp3")
 
 [node name="ФонНочной2" type="Sprite2D" parent="."]
-position = Vector2(699, 1022)
+position = Vector2(699, 1071)
 scale = Vector2(5820.86, 406.033)
 texture = ExtResource("1_0xm2m")
 
@@ -22,6 +36,97 @@ texture = ExtResource("1_0xm2m")
 position = Vector2(231, 156)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_h2yge")]
-position = Vector2(1606, -311)
+position = Vector2(266, 1401)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(12871, -9895)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(7859, 6451)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(-6263, 9222)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(-11008, -4809)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ZVDANIE" type="Node" parent="CanvasLayer"]
+
+[node name="1 меню" type="Marker2D" parent="CanvasLayer/ZVDANIE"]
+position = Vector2(0, -5000)
+
+[node name="Button" type="Button" parent="CanvasLayer/ZVDANIE/1 меню"]
+process_mode = 3
+offset_left = 692.0
+offset_top = 351.0
+offset_right = 819.0
+offset_bottom = 382.0
+scale = Vector2(4.2, 4.2)
+text = "задания"
+
+[node name="Button2" type="Button" parent="CanvasLayer/ZVDANIE/1 меню"]
+process_mode = 3
+offset_left = 838.0
+offset_top = 569.0
+offset_right = 899.0
+offset_bottom = 600.0
+scale = Vector2(4.2, 4.2)
+text = "выйти"
+
+[node name="2 меню" type="Marker2D" parent="CanvasLayer/ZVDANIE"]
+position = Vector2(0, 5000)
+
+[node name="Button3" type="Button" parent="CanvasLayer/ZVDANIE/2 меню"]
+process_mode = 3
+offset_left = 692.0
+offset_top = 646.0
+offset_right = 819.0
+offset_bottom = 677.0
+scale = Vector2(4.2, 4.2)
+text = "взять задание"
+
+[node name="Button4" type="Button" parent="CanvasLayer/ZVDANIE/2 меню"]
+process_mode = 3
+offset_left = 775.0
+offset_top = 844.0
+offset_right = 865.0
+offset_bottom = 875.0
+scale = Vector2(4.2, 4.2)
+text = "Отказатся"
+
+[node name="Label" type="Label" parent="CanvasLayer/ZVDANIE/2 меню"]
+offset_left = -76.0
+offset_top = 255.0
+offset_right = 2065.0
+offset_bottom = 444.0
+text = "Империя требует: ликвидировать угрозу!
+ Уничтожьте 5 пиратских кораблей
+и докажите свою верность."
+label_settings = SubResource("LabelSettings_lquwl")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Задания:"
+label_settings = SubResource("LabelSettings_7mycd")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 915.0
+offset_top = 26.0
+offset_right = 1158.0
+offset_bottom = 66.0
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 1453.0
+offset_top = 11.0
+offset_right = 1901.0
+offset_bottom = 65.0
+value = 100.0
+
+[connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="button_down" from="CanvasLayer/ZVDANIE/2 меню/Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="CanvasLayer/ZVDANIE/2 меню/Button4" to="." method="_on_button_4_button_down"]

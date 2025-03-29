@@ -8,13 +8,15 @@ var speedr = 10
 var target_pos = Vector2()
 var new_transform = Vector2()
 var canshoot = true
+var lives = 100
+var quest = "none"
 func _physics_process(delta):
 	target_pos = get_global_mouse_position()
 	new_transform = transform.looking_at(target_pos)
 	transform  = transform.interpolate_with(new_transform, speedr * delta)
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
-	
+	$"../CanvasLayer/ProgressBar".value = lives
 	if Input.is_mouse_button_pressed(1) and canshoot:
 		shoot()
 	
