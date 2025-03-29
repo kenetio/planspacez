@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bikorwmp4trqn"]
+[gd_scene load_steps=6 format=3 uid="uid://c1m3lrxybxbur"]
 
 [ext_resource type="Texture2D" uid="uid://c5tfl8bdq8jj" path="res://Фон ночной.png" id="2_6pe17"]
-[ext_resource type="Texture2D" uid="uid://c4ujnic5xthw1" path="res://Фон настройки.png" id="3_5qru0"]
 [ext_resource type="Texture2D" uid="uid://cayehcxrf3dvx" path="res://прицел (2).png" id="3_gfssk"]
 [ext_resource type="Script" path="res://texture_button5.gd" id="4_gfssk"]
+[ext_resource type="Script" uid="uid://d34r0rcu7sjv0" path="res://texture_button_9.gd" id="5_gfssk"]
 [ext_resource type="Texture2D" uid="uid://dgpex288inhlb" path="res://Режим экрана.png" id="5_nxmeo"]
 
 [node name="Node2D" type="Node2D"]
@@ -12,11 +12,6 @@
 position = Vector2(936, 540)
 scale = Vector2(2.10352, 2.10352)
 texture = ExtResource("2_6pe17")
-
-[node name="ФонНастройки" type="Sprite2D" parent="."]
-position = Vector2(966, 525)
-scale = Vector2(5.5, 3.89063)
-texture = ExtResource("3_5qru0")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 1103.0
@@ -38,5 +33,7 @@ texture_pressed = ExtResource("5_nxmeo")
 texture_hover = ExtResource("5_nxmeo")
 texture_disabled = ExtResource("5_nxmeo")
 texture_focused = ExtResource("5_nxmeo")
+script = ExtResource("5_gfssk")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton2" to="TextureButton2" method="_on_pressed"]

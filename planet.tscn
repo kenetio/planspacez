@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn5rrsupjgfbd"]
+[gd_scene load_steps=5 format=3 uid="uid://b3f7ysl7ime3u"]
 
 [ext_resource type="Texture2D" uid="uid://cy7rsq1un6vgu" path="res://images/сыктыфкар.png" id="1_1odxm"]
-[ext_resource type="Script" uid="uid://rr23jcihcic1" path="res://planetarea.gd" id="2_mtr83"]
+[ext_resource type="Script" path="res://planetarea.gd" id="2_mtr83"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1odxm"]
 radius = 115.251
