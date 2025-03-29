@@ -1,52 +1,45 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwnbraxrj8u5d"]
+[gd_scene load_steps=9 format=3 uid="uid://1sfvcuvj837u"]
 
-[ext_resource type="Script" uid="uid://vuo83fi6hr0x" path="res://enemy.gd" id="1_iifgy"]
-[ext_resource type="PackedScene" uid="uid://cag6hxhhy3jy1" path="res://enemybullet.tscn" id="2_3yqyl"]
-[ext_resource type="Texture2D" uid="uid://ioboy4betemu" path="res://images/корабль пиратов мейби1.png" id="2_epg4t"]
-[ext_resource type="Texture2D" uid="uid://ckwts1wypqgp7" path="res://images/корабль пиратов мейби2.png" id="3_3yqyl"]
-[ext_resource type="Texture2D" uid="uid://cnm5du8xcokvx" path="res://images/корабль пиратов мейби3.png" id="4_wujgv"]
+[ext_resource type="Script" uid="uid://byoomhaq4su6j" path="res://elite.gd" id="1_rru5w"]
+[ext_resource type="Texture2D" uid="uid://b2upm377gkajh" path="res://images/Элитка1.png" id="2_fqehm"]
+[ext_resource type="PackedScene" uid="uid://cag6hxhhy3jy1" path="res://enemybullet.tscn" id="2_vwwy7"]
+[ext_resource type="Texture2D" uid="uid://bmyyexwbb2q3r" path="res://images/Элитка2.png" id="3_vwwy7"]
+[ext_resource type="Texture2D" uid="uid://bjn3lo1cdh7bh" path="res://images/Элитка3.png" id="4_sn5ri"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hb8ge"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_epg4t")
+"texture": ExtResource("2_fqehm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_3yqyl")
+"texture": ExtResource("3_vwwy7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_wujgv")
+"texture": ExtResource("4_sn5ri")
 }],
 "loop": true,
-"name": &"default",
+"name": &"new_animation",
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e1ltt"]
-radius = 13.0
-height = 104.0
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_dxifv"]
-radius = 917.288
+radius = 1457.04
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iifgy"]
 radius = 577.281
 
-[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
-script = ExtResource("1_iifgy")
-bullet = ExtResource("2_3yqyl")
+[node name="Elite" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_rru5w")
+bullet = ExtResource("2_vwwy7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4, 3)
 rotation = 1.5708
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_hb8ge")
-autoplay = "default"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_e1ltt")
+animation = &"new_animation"
+autoplay = "new_animation"
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -59,10 +52,8 @@ shape = SubResource("CircleShape2D_dxifv")
 shape = SubResource("CircleShape2D_iifgy")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
 autostart = true
-
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(45, 0)
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 10.0
@@ -72,6 +63,32 @@ autostart = true
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
 position = Vector2(-4.5, 4.50002)
 scale = Vector2(5.65, 3.65)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-6, -52, -7, 58, -7, 58, 15, 96, 74, 50, 75, -41, 14, -88)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(81, 2)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(61, 51)
+rotation = 0.785398
+scale = Vector2(1, 1)
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(22, 78)
+rotation = 0.785398
+scale = Vector2(1, 1)
+
+[node name="Marker2D4" type="Marker2D" parent="."]
+position = Vector2(60, -44)
+rotation = -0.785398
+scale = Vector2(1, 1)
+
+[node name="Marker2D5" type="Marker2D" parent="."]
+position = Vector2(20, -73)
+rotation = -0.785398
+scale = Vector2(1, 1)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

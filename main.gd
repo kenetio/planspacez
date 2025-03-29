@@ -5,6 +5,7 @@ var quest = "none"
 var killt = 0
 var imper = 0
 @export var ememy : PackedScene
+@export var elt : PackedScene
 
 @export var player: Node2D  # Узел игрока
 @export var planet_scene: PackedScene  # Сцена планеты
@@ -57,6 +58,8 @@ func find_nearest_planet():
 		nearest_planet_x = nearest_planet.position.x
 		nearest_planet_y = nearest_planet.position.y
 		print("Ближайшая планета (X, Y):", nearest_planet_x, nearest_planet_y)
+	if imper >= 100:
+		get_tree().change_scene_to_file("res://end.tscn")
 
 func enterplanet():
 	if quest == "none":
@@ -133,3 +136,9 @@ func _on_timer_2_timeout() -> void:
 	var b3 = ememy.instantiate()
 	get_tree().root.add_child(b3)
 	b3.position = Vector2($Player.position.x-1400, $Player.position.y)
+
+
+func _on_timerelt_timeout():
+	var b = elt.instantiate()
+	get_tree().root.add_child(b)
+	b.position = Vector2($Player.position.x, $Player.position.y-700)

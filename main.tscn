@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://p44enuo2rhry"]
+[gd_scene load_steps=13 format=3 uid="uid://p44enuo2rhry"]
 
 [ext_resource type="Texture2D" uid="uid://dkwbemya1crni" path="res://images/Фон ночной.png" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://bidkxblix6igh" path="res://main.gd" id="1_1bvp3"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://da6fep2v8siev" path="res://Silkscreen [RUS by Mr.Enot].ttf" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bwnbraxrj8u5d" path="res://enemy.tscn" id="6_7mycd"]
 [ext_resource type="AudioStream" uid="uid://f14jcrg0r3j8" path="res://game musice.mp3" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://1sfvcuvj837u" path="res://elite.tscn" id="8_5vw27"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
 font = ExtResource("5_lquwl")
@@ -36,10 +37,11 @@ shadow_size = 2
 [node name="Main" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_1bvp3")
 ememy = ExtResource("6_7mycd")
+elt = ExtResource("8_5vw27")
 player = NodePath("Player")
 planet_scene = ExtResource("3_h2yge")
 spawn_count = 10
-spawn_range = Vector2(25000, 25000)
+spawn_range = Vector2(17000, 17000)
 
 [node name="ФонНочной2" type="Sprite2D" parent="."]
 position = Vector2(699, 1196)
@@ -187,7 +189,11 @@ wait_time = 0.1
 autostart = true
 
 [node name="Timer2" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 12.0
+autostart = true
+
+[node name="Timerelt" type="Timer" parent="."]
+wait_time = 25.0
 autostart = true
 
 [connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button" to="." method="_on_button_pressed"]
@@ -197,3 +203,4 @@ autostart = true
 [connection signal="button_down" from="CanvasLayer/ZVDANIE/4 меню/Buttonss" to="." method="_on_buttonss_button_down"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timerelt" to="." method="_on_timerelt_timeout"]
