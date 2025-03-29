@@ -16,10 +16,10 @@ func _on_area_2d_body_entered(body):
 
 func _physics_process(delta):
 	if active:
-		new_transform = transform.looking_at($"../Player".position)
+		new_transform = transform.looking_at($"../Main/Player".position)
 		transform  = transform.interpolate_with(new_transform, 10 * delta)
 		if walk:
-			position = position.move_toward($"../Player".position, speed * delta)
+			position = position.move_toward($"../Main/Player".position, speed * delta)
 	if lives <= 0:
 		queue_free()
 	if lives < 50:

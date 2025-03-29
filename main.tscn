@@ -33,8 +33,13 @@ outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 2
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_1bvp3")
+ememy = ExtResource("6_7mycd")
+player = NodePath("Player")
+planet_scene = ExtResource("3_h2yge")
+spawn_count = 10
+spawn_range = Vector2(25000, 25000)
 
 [node name="ФонНочной2" type="Sprite2D" parent="."]
 position = Vector2(699, 1196)
@@ -43,21 +48,6 @@ texture = ExtResource("1_0xm2m")
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(231, 156)
-
-[node name="StaticBody2D" parent="." instance=ExtResource("3_h2yge")]
-position = Vector2(266, 1401)
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("3_h2yge")]
-position = Vector2(12871, -9895)
-
-[node name="StaticBody2D3" parent="." instance=ExtResource("3_h2yge")]
-position = Vector2(7859, 6451)
-
-[node name="StaticBody2D4" parent="." instance=ExtResource("3_h2yge")]
-position = Vector2(-6263, 9222)
-
-[node name="StaticBody2D5" parent="." instance=ExtResource("3_h2yge")]
-position = Vector2(-11008, -4809)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -192,11 +182,18 @@ value = 100.0
 stream = ExtResource("7_272bh")
 autoplay = true
 
-[node name="Enemy" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(-1392, 110)
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
 
 [connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="button_down" from="CanvasLayer/ZVDANIE/2 меню/Button3" to="." method="_on_button_3_button_down"]
 [connection signal="button_down" from="CanvasLayer/ZVDANIE/2 меню/Button4" to="." method="_on_button_4_button_down"]
 [connection signal="button_down" from="CanvasLayer/ZVDANIE/4 меню/Buttonss" to="." method="_on_buttonss_button_down"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

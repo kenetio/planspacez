@@ -15,7 +15,7 @@ func _physics_process(delta):
 	target_pos = get_global_mouse_position()
 	new_transform = transform.looking_at(target_pos)
 	transform  = transform.interpolate_with(new_transform, speedr * delta)
-	$Marker2D2.look_at(Vector2(266, 1401))
+	$Marker2D2.look_at(Vector2($"..".nearest_planet_x, $"..".nearest_planet_y))
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
 	$"../CanvasLayer/ProgressBar".value = lives

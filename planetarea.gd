@@ -4,8 +4,14 @@ var random = RandomNumberGenerator.new()
 var canenter = true
 
 func _ready():
-	if randi_range(1, 2) == 1:
+	if randi_range(1, 5) == 1:
 		$"../Сыктыфкар".visible = true
+	elif randi_range(1, 5) == 1:
+		$"../Planet-Stigma".visible = true
+	elif randi_range(1, 5) == 1:
+		$"../Planet-Solemn".visible = true
+	elif randi_range(1, 5) == 1:
+		$"../Planet-Barbek".visible = true
 	else:
 		$"../Planet-arc'han".visible = true
 

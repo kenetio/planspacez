@@ -1,14 +1,182 @@
-[gd_scene load_steps=6 format=3 uid="uid://dn5rrsupjgfbd"]
+[gd_scene load_steps=45 format=3 uid="uid://dn5rrsupjgfbd"]
 
 [ext_resource type="Texture2D" uid="uid://cy7rsq1un6vgu" path="res://images/сыктыфкар.png" id="1_1odxm"]
 [ext_resource type="Texture2D" uid="uid://ifapo4iqbad0" path="res://images/planet-arc'han.png" id="2_a75xc"]
 [ext_resource type="Script" uid="uid://rr23jcihcic1" path="res://planetarea.gd" id="2_mtr83"]
+[ext_resource type="Texture2D" uid="uid://dktmeab7rv0pn" path="res://planets/planet-stigma1.png" id="4_76h37"]
+[ext_resource type="Texture2D" uid="uid://bsalfeplqefx2" path="res://planets/planet-stigma2.png" id="5_05ywt"]
+[ext_resource type="Texture2D" uid="uid://cowv3whok2ugm" path="res://planets/planet-stigma3.png" id="6_oltg6"]
+[ext_resource type="Texture2D" uid="uid://ds6o85tfwa3mw" path="res://planets/planet-stigma4.png" id="7_1wsln"]
+[ext_resource type="Texture2D" uid="uid://t5oswuj7alhk" path="res://planets/planet-stigma5.png" id="8_xlnx0"]
+[ext_resource type="Texture2D" uid="uid://dop8cbfin8q4u" path="res://planets/planet-stigma6.png" id="9_hp6s2"]
+[ext_resource type="Texture2D" uid="uid://dv57oq56qdrle" path="res://planets/planet-stigma7.png" id="10_ttgr5"]
+[ext_resource type="Texture2D" uid="uid://kmd4eh8rtgv0" path="res://planets/planet-stigma8.png" id="11_gtl15"]
+[ext_resource type="Texture2D" uid="uid://cm8pfakwdwudp" path="res://planets/planet-stigma9.png" id="12_oxaqy"]
+[ext_resource type="Texture2D" uid="uid://dwwvft7q0ykjx" path="res://planets/planet-stigma10.png" id="13_18jkp"]
+[ext_resource type="Texture2D" uid="uid://d0lem32b565s0" path="res://planets/planet-stigma11.png" id="14_rmqb1"]
+[ext_resource type="Texture2D" uid="uid://bigvik0on63ew" path="res://planets/planet-stigma12.png" id="15_6mxh2"]
+[ext_resource type="Texture2D" uid="uid://dwtkpp7hnelu7" path="res://planets/planet-solemn1.png" id="16_7qi5d"]
+[ext_resource type="Texture2D" uid="uid://cfpvw3wd4j01b" path="res://planets/planet-solemn2.png" id="17_v6smi"]
+[ext_resource type="Texture2D" uid="uid://o6najllaw17q" path="res://planets/planet-solemn3.png" id="18_tpvap"]
+[ext_resource type="Texture2D" uid="uid://r63dby517g8r" path="res://planets/planet-solemn4.png" id="19_rmjvt"]
+[ext_resource type="Texture2D" uid="uid://dl422yogu5upw" path="res://planets/planet-solemn5.png" id="20_6a18x"]
+[ext_resource type="Texture2D" uid="uid://c0x02urcvowac" path="res://planets/planet-solemn6.png" id="21_j538t"]
+[ext_resource type="Texture2D" uid="uid://jhh4hrnxbcmk" path="res://planets/planet-solemn7.png" id="22_hf35q"]
+[ext_resource type="Texture2D" uid="uid://bsyw7ssvk23cx" path="res://planets/planet-solemn8.png" id="23_8o148"]
+[ext_resource type="Texture2D" uid="uid://b2o8xvfa2hy6y" path="res://planets/planet-solemn9.png" id="24_iixi2"]
+[ext_resource type="Texture2D" uid="uid://bvryjmu6i5xu4" path="res://planets/planet-solemn10.png" id="25_6w2ve"]
+[ext_resource type="Texture2D" uid="uid://5cqfhfe7s0dj" path="res://planets/planet-solemn11.png" id="26_e2wx1"]
+[ext_resource type="Texture2D" uid="uid://cor5delr5dtp" path="res://planets/planet-solemn12.png" id="27_bqpc7"]
+[ext_resource type="Texture2D" uid="uid://dymip0q3pxa2o" path="res://planets/planet-barbek1.png" id="28_52usj"]
+[ext_resource type="Texture2D" uid="uid://beaa0cg168qsx" path="res://planets/planet-barbek2.png" id="29_h3vcf"]
+[ext_resource type="Texture2D" uid="uid://cknd5djp0qoak" path="res://planets/planet-barbek3.png" id="30_8dnqk"]
+[ext_resource type="Texture2D" uid="uid://cre2weakiujka" path="res://planets/planet-barbek4.png" id="31_adowp"]
+[ext_resource type="Texture2D" uid="uid://c80bmmvg70g7r" path="res://planets/planet-barbek5.png" id="32_oddui"]
+[ext_resource type="Texture2D" uid="uid://bjtpkwn0jq2oi" path="res://planets/planet-barbek6.png" id="33_vfdy1"]
+[ext_resource type="Texture2D" uid="uid://d2sgrmfunhm4w" path="res://planets/planet-barbek7.png" id="34_yi4mb"]
+[ext_resource type="Texture2D" uid="uid://dxi3j5o8bosan" path="res://planets/planet-barbek8.png" id="35_y3wmo"]
+[ext_resource type="Texture2D" uid="uid://py2ehe6eb5lr" path="res://planets/planet-barbek9.png" id="36_w4h05"]
+[ext_resource type="Texture2D" uid="uid://befsfs1iw0vvh" path="res://planets/planet-barbek10.png" id="37_mdndw"]
+[ext_resource type="Texture2D" uid="uid://npkww5c1pklf" path="res://planets/planet-barbek11.png" id="38_c3w73"]
+[ext_resource type="Texture2D" uid="uid://1gyx6m3etbji" path="res://planets/planet-barbek12.png" id="39_ly3lp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1odxm"]
 radius = 115.251
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mtr83"]
 radius = 154.007
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k43qs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_76h37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_05ywt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oltg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1wsln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xlnx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hp6s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ttgr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gtl15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oxaqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_18jkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rmqb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6mxh2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hv7sv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_7qi5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_v6smi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tpvap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rmjvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6a18x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_j538t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_hf35q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_8o148")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_iixi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_6w2ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_e2wx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bqpc7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n06en"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_52usj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_h3vcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_8dnqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_adowp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_oddui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_vfdy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_yi4mb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_y3wmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_w4h05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_mdndw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_c3w73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ly3lp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="StaticBody2D" type="StaticBody2D" groups=["planet"]]
 scale = Vector2(4, 4)
@@ -36,6 +204,28 @@ shape = SubResource("CircleShape2D_mtr83")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Planet-Stigma" type="AnimatedSprite2D" parent="."]
+visible = false
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_k43qs")
+autoplay = "default"
+frame_progress = 0.83092
+
+[node name="Planet-Solemn" type="AnimatedSprite2D" parent="."]
+visible = false
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_hv7sv")
+autoplay = "default"
+frame = 11
+frame_progress = 1.0
+
+[node name="Planet-Barbek" type="AnimatedSprite2D" parent="."]
+visible = false
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_n06en")
+autoplay = "default"
+frame_progress = 0.382296
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="Area2D" method="_on_timer_timeout"]
