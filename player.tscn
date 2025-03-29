@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cknl1myfsgidb"]
+[gd_scene load_steps=9 format=3 uid="uid://cknl1myfsgidb"]
 
 [ext_resource type="Script" uid="uid://cmmnwm3sx8eyl" path="res://player.gd" id="1_hqtel"]
 [ext_resource type="PackedScene" uid="uid://qqd8j0vtt6ii" path="res://bullet.tscn" id="2_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://bgassj785lps5" path="res://images/Корабль_но_пушка_выпирает_сильно1.png" id="2_sweqy"]
 [ext_resource type="Texture2D" uid="uid://citnbfu1tf103" path="res://images/Корабль_но_пушка_выпирает_сильно2.png" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://djyuegjfpqlol" path="res://images/Корабль_но_пушка_выпирает_сильно3.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://dve5vbvs7q2jr" path="res://images/Стрелка иперия.png" id="6_2hs0m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
 animations = [{
@@ -51,6 +52,13 @@ shape = SubResource("CapsuleShape2D_b26j0")
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+
+[node name="СтрелкаИперия" type="Sprite2D" parent="Marker2D2"]
+position = Vector2(209, 10)
+rotation = 1.5708
+scale = Vector2(4, 4)
+texture = ExtResource("6_2hs0m")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
