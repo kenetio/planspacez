@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvu3be1vhs0v1"]
+[gd_scene load_steps=10 format=3 uid="uid://bvu3be1vhs0v1"]
 
 [ext_resource type="Texture2D" uid="uid://dcj5nb15as7o6" path="res://1546816005_preview_handsome-squidward-42402-2880x1800.jpg" id="1_8t6bc"]
 [ext_resource type="Texture2D" uid="uid://cn5lyk45ctxqs" path="res://Титеры.png" id="2_8t6bc"]
 [ext_resource type="Script" uid="uid://cw7q7klwmp6a1" path="res://texture_button4545.gd" id="3_ber5h"]
 [ext_resource type="Texture2D" uid="uid://c52erqeregisp" path="res://Выход.png" id="3_ya57s"]
 [ext_resource type="AudioStream" uid="uid://cgcossib1716c" path="res://Skillet Monster but Neco Arc sings it AI COVER.mp3" id="5_ya57s"]
+[ext_resource type="Texture2D" uid="uid://dlhtmilq6e3op" path="res://c1646d1586be5663ba6b823a6b95b40c.jpg" id="6_r37h0"]
+[ext_resource type="Texture2D" uid="uid://e07dyg1ovkbj" path="res://e39a363ef35cf80a5004d41e67d26ff5.jpg" id="7_55gfu"]
+[ext_resource type="Texture2D" uid="uid://c8h5h7wi1ltyy" path="res://st,small,507x507-pad,600x600,f8f8f8.jpg" id="8_oioyy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hpa2q"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
 
@@ -34,5 +40,29 @@ texture = ExtResource("2_8t6bc")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ya57s")
 autoplay = true
+
+[node name="C1646d1586Be5663Ba6b823a6b95b40c" type="Sprite2D" parent="."]
+position = Vector2(147, 322)
+scale = Vector2(0.221467, 0.209663)
+texture = ExtResource("6_r37h0")
+
+[node name="E39a363Ef35Cf80a5004d41e67d26Ff5" type="Sprite2D" parent="."]
+position = Vector2(140, 714)
+scale = Vector2(0.236413, 0.236413)
+texture = ExtResource("7_55gfu")
+
+[node name="St,small,507x507-pad,600x600,f8f8f8" type="Sprite2D" parent="."]
+position = Vector2(176, 514)
+scale = Vector2(0.271667, 0.271667)
+texture = ExtResource("8_oioyy")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 103.0
+offset_right = 150.0
+offset_bottom = 126.0
+scale = Vector2(3.115, 3.115)
+text = "Фото участников"
+label_settings = SubResource("LabelSettings_hpa2q")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
