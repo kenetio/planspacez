@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dywp6uwjlccfo"
+path="res://.godot/imported/Papers Please OST — PAPERS PLEASE Theme - Orchestral (www.lightaudio.ru).mp3-7354c4e2ac902f0fe107375069e5a033.mp3str"
+
+[deps]
+
+source_file="res://Papers Please OST — PAPERS PLEASE Theme - Orchestral (www.lightaudio.ru).mp3"
+dest_files=["res://.godot/imported/Papers Please OST — PAPERS PLEASE Theme - Orchestral (www.lightaudio.ru).mp3-7354c4e2ac902f0fe107375069e5a033.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

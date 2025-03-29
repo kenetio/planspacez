@@ -6,6 +6,7 @@ var walk = false
 var new_transform = Vector2()
 var speed = 300
 var lives = 50
+var waswisibl = false
 
 
 func _on_area_2d_body_entered(body):
@@ -46,3 +47,12 @@ func shoot():
 
 func _on_timer_timeout():
 	shoot()
+
+
+func _on_visible_on_screen_enabler_2d_screen_entered():
+	waswisibl = true
+
+
+func _on_timer_2_timeout():
+	if waswisibl == false:
+		queue_free()

@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnc0fqitqmcq"]
+
+[ext_resource type="Texture2D" uid="uid://dkwbemya1crni" path="res://images/Фон ночной.png" id="1_75yvt"]
+[ext_resource type="FontFile" uid="uid://da6fep2v8siev" path="res://Silkscreen [RUS by Mr.Enot].ttf" id="2_jclhh"]
+[ext_resource type="Texture2D" uid="uid://difuqj0wtml4b" path="res://images/bvgthbz.png" id="3_m3e5g"]
+[ext_resource type="AudioStream" uid="uid://dywp6uwjlccfo" path="res://Papers Please OST — PAPERS PLEASE Theme - Orchestral (www.lightaudio.ru).mp3" id="4_u6pt3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_beduj"]
+font = ExtResource("2_jclhh")
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="End" type="Node2D"]
+
+[node name="ФонНочной" type="Sprite2D" parent="."]
+position = Vector2(872, 532)
+scale = Vector2(2.42188, 2.42188)
+texture = ExtResource("1_75yvt")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -1696.0
+offset_top = 98.0
+offset_right = 3581.0
+offset_bottom = 823.0
+text = "ОФИЦИАЛЬНОЕ СООБЩЕНИЕ ИМПЕРАТОРСКОГО СОВЕТА
+
+
+Уважаемый игрок,
+
+
+ Именем Императора и всей Империи,
+мы выражаем нашу глубочайшую
+ благодарность за ваши выдающиеся
+заслуги в борьбе с пиратской угрозой
+и защите интересов Империи.
+Ваша храбрость, преданность и
+самоотверженность стали примером
+для всех граждан.
+
+
+За ваши подвиги Императорский Совет
+единогласно постановил присвоить вам
+звание Доверенного Лица Империи.
+Этот титул дарует вам право на
+пожизненное убежище на
+любой территории Империи,
+а также особые привилегии и уважение.
+
+
+ Добро пожаловать домой, герой.
+Ваше место среди нас.
+Да пребудет с вами Империя!"
+label_settings = SubResource("LabelSettings_beduj")
+horizontal_alignment = 1
+
+[node name="Bvgthbz" type="Sprite2D" parent="."]
+position = Vector2(956, 881)
+scale = Vector2(15, 15)
+texture = ExtResource("3_m3e5g")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_u6pt3")
+autoplay = true

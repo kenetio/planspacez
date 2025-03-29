@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://5f0baxul83ri"]
+[gd_scene load_steps=8 format=3 uid="uid://5f0baxul83ri"]
 
 [ext_resource type="Texture2D" uid="uid://c5tfl8bdq8jj" path="res://Фон ночной.png" id="1_5b4wn"]
 [ext_resource type="Texture2D" uid="uid://cqq0ll6kkqiyg" path="res://images/Снимок экрана 2025-03-16 205533.png" id="2_lfvhc"]
 [ext_resource type="FontFile" uid="uid://da6fep2v8siev" path="res://Silkscreen [RUS by Mr.Enot].ttf" id="3_fc6k1"]
 [ext_resource type="Texture2D" uid="uid://bbdfefulwh7pb" path="res://ГОДЕН.png" id="4_lfvhc"]
+[ext_resource type="AudioStream" uid="uid://0urpjxstclab" path="res://Skrillex feat (mp3cut.net).mp3" id="5_fc6k1"]
+[ext_resource type="Texture2D" uid="uid://iqamchxaqu01" path="res://maxresdefault (31).jpg" id="6_ipp1k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ipp1k"]
 font = ExtResource("3_fc6k1")
@@ -14,7 +16,7 @@ outline_color = Color(1, 0.913725, 0, 1)
 shadow_size = 15
 shadow_color = Color(1, 0, 0, 0)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="ФонНочной" type="Sprite2D" parent="."]
 position = Vector2(391, 543)
@@ -48,3 +50,12 @@ label_settings = SubResource("LabelSettings_ipp1k")
 position = Vector2(301, 816.25)
 scale = Vector2(8.23529, 50.125)
 texture = ExtResource("4_lfvhc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_fc6k1")
+autoplay = true
+
+[node name="Maxresdefault(31)" type="Sprite2D" parent="."]
+position = Vector2(966, 201)
+scale = Vector2(1.44512, 0.0503472)
+texture = ExtResource("6_ipp1k")

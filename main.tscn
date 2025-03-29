@@ -59,42 +59,6 @@ position = Vector2(-6263, 9222)
 [node name="StaticBody2D5" parent="." instance=ExtResource("3_h2yge")]
 position = Vector2(-11008, -4809)
 
-[node name="Enemy" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(-1013, 1192)
-
-[node name="Enemy2" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(-1693, -885)
-
-[node name="Enemy3" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(1648, -1413)
-
-[node name="Enemy4" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(5059, 500)
-
-[node name="Enemy5" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(1852, 1022)
-
-[node name="Enemy6" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(-452, -1339)
-
-[node name="Enemy7" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(2942, -346)
-
-[node name="Enemy8" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(-2536, 322)
-
-[node name="Enemy9" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(3610, -2120)
-
-[node name="Enemy10" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(-2540, 1777)
-
-[node name="Enemy11" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(2978, 1705)
-
-[node name="Enemy12" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(380, -2621)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ZVDANIE" type="Node" parent="CanvasLayer"]
@@ -227,6 +191,9 @@ value = 100.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_272bh")
 autoplay = true
+
+[node name="Enemy" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(-1392, 110)
 
 [connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ZVDANIE/1 меню/Button2" to="." method="_on_button_2_pressed"]

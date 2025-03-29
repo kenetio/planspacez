@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0urpjxstclab"
+path="res://.godot/imported/Skrillex feat (mp3cut.net).mp3-bbe738455341c1a6df9e590aa6933f95.mp3str"
+
+[deps]
+
+source_file="res://Skrillex feat (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/Skrillex feat (mp3cut.net).mp3-bbe738455341c1a6df9e590aa6933f95.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

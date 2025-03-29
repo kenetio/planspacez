@@ -21,10 +21,10 @@ func _physics_process(delta):
 	$"../CanvasLayer/ProgressBar".value = lives
 	if Input.is_mouse_button_pressed(1) and canshoot:
 		shoot()
+	$"НебаТу".rotation = -1*rotation
 	
 	
 	move_and_slide()
-	$"НебаТу".rotation = -rotation
 	
 func shoot():
 	var b = bullet.instantiate()

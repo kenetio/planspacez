@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://dwtshxfpgxx8q" path="res://texture_button_3.gd" id="6_ql4rb"]
 [ext_resource type="Texture2D" uid="uid://qtk1sd1pjbc1" path="res://images/Название.png" id="8_0ql6g"]
 [ext_resource type="Texture2D" uid="uid://171o374g4wl5" path="res://титры.png" id="9_ql4rb"]
-[ext_resource type="Script" uid="uid://b6a0cw3h1ynn" path="res://texture_button_43.gd" id="10_0ql6g"]
+[ext_resource type="Script" path="res://texture_button_43.gd" id="10_0ql6g"]
 
 [node name="Node2D" type="Node2D"]
 
