@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://5f0baxul83ri"]
+[gd_scene load_steps=8 format=3 uid="uid://5f0baxul83ri"]
 
 [ext_resource type="Texture2D" uid="uid://c5tfl8bdq8jj" path="res://Фон ночной.png" id="1_5b4wn"]
 [ext_resource type="Texture2D" uid="uid://cqq0ll6kkqiyg" path="res://images/Снимок экрана 2025-03-16 205533.png" id="2_lfvhc"]
 [ext_resource type="FontFile" uid="uid://da6fep2v8siev" path="res://Silkscreen [RUS by Mr.Enot].ttf" id="3_fc6k1"]
 [ext_resource type="Texture2D" uid="uid://bbdfefulwh7pb" path="res://ГОДЕН.png" id="4_lfvhc"]
+[ext_resource type="Texture2D" uid="uid://cfcpks83q4dlx" path="res://6783fe559f2c1356daa7ee9a55ad74ef.jpg" id="5_fc6k1"]
+[ext_resource type="Script" uid="uid://1cmidj2etdrf" path="res://texturef_button.gd" id="5_ipp1k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ipp1k"]
 font = ExtResource("3_fc6k1")
@@ -44,7 +46,22 @@ offset_bottom = 313.0
 text = "GG GAME OVER VENOM"
 label_settings = SubResource("LabelSettings_ipp1k")
 
-[node name="Годен" type="Sprite2D" parent="."]
-position = Vector2(301, 816.25)
-scale = Vector2(8.23529, 50.125)
-texture = ExtResource("4_lfvhc")
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 8.0
+offset_top = 1012.0
+offset_right = 42.0
+offset_bottom = 1024.0
+scale = Vector2(5.5, 5.5)
+texture_normal = ExtResource("4_lfvhc")
+texture_pressed = ExtResource("4_lfvhc")
+texture_hover = ExtResource("4_lfvhc")
+texture_disabled = ExtResource("4_lfvhc")
+texture_focused = ExtResource("4_lfvhc")
+script = ExtResource("5_ipp1k")
+
+[node name="6783Fe559f2c1356Daa7Ee9a55Ad74Ef" type="Sprite2D" parent="."]
+position = Vector2(935, 486)
+scale = Vector2(1, 0.268944)
+texture = ExtResource("5_fc6k1")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
