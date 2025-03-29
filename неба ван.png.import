@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx7ksn76hd2ff"
-path="res://.godot/imported/planet-arc'han.png-7bc8c4a46d7b7b56ed60c3cb3c4371a6.ctex"
+uid="uid://bndfv8jv58weo"
+path="res://.godot/imported/неба ван.png-efe75c06964cad60f7ed4ed503b6d553.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://planet-arc'han.png"
-dest_files=["res://.godot/imported/planet-arc'han.png-7bc8c4a46d7b7b56ed60c3cb3c4371a6.ctex"]
+source_file="res://неба ван.png"
+dest_files=["res://.godot/imported/неба ван.png-efe75c06964cad60f7ed4ed503b6d553.ctex"]
 
 [params]
 

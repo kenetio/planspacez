@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://c5tfl8bdq8jj" path="res://Фон ночной.png" id="1_vhjva"]
 [ext_resource type="Texture2D" uid="uid://befc4o82sr01q" path="res://Спрайт-0001.png" id="2_ql4rb"]
-[ext_resource type="Script" path="res://texture_button.gd" id="3_b4jm0"]
+[ext_resource type="Script" uid="uid://bl1m1d74vpsn4" path="res://texture_button.gd" id="3_b4jm0"]
 [ext_resource type="Texture2D" uid="uid://bgsqig0i7vt0n" path="res://Настройки.png" id="4_ixidm"]
-[ext_resource type="Script" path="res://texture_button_2.gd" id="5_ql4rb"]
+[ext_resource type="Script" uid="uid://iepkmjoc8jt4" path="res://texture_button_2.gd" id="5_ql4rb"]
 [ext_resource type="Texture2D" uid="uid://c52erqeregisp" path="res://Выход.png" id="5_vhjva"]
-[ext_resource type="Script" path="res://texture_button_3.gd" id="6_ql4rb"]
+[ext_resource type="Script" uid="uid://dwtshxfpgxx8q" path="res://texture_button_3.gd" id="6_ql4rb"]
 [ext_resource type="Texture2D" uid="uid://qtk1sd1pjbc1" path="res://images/Название.png" id="8_0ql6g"]
 
 [node name="Node2D" type="Node2D"]
