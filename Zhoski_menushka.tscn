@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://c24sspw40xh2"]
+[gd_scene load_steps=11 format=3 uid="uid://c24sspw40xh2"]
 
 [ext_resource type="Texture2D" uid="uid://c5tfl8bdq8jj" path="res://Фон ночной.png" id="1_vhjva"]
 [ext_resource type="Texture2D" uid="uid://befc4o82sr01q" path="res://Спрайт-0001.png" id="2_ql4rb"]
-[ext_resource type="Script" path="res://texture_button.gd" id="3_b4jm0"]
+[ext_resource type="Script" uid="uid://bl1m1d74vpsn4" path="res://texture_button.gd" id="3_b4jm0"]
 [ext_resource type="Texture2D" uid="uid://bgsqig0i7vt0n" path="res://Настройки.png" id="4_ixidm"]
-[ext_resource type="Script" path="res://texture_button_2.gd" id="5_ql4rb"]
+[ext_resource type="Script" uid="uid://iepkmjoc8jt4" path="res://texture_button_2.gd" id="5_ql4rb"]
 [ext_resource type="Texture2D" uid="uid://c52erqeregisp" path="res://Выход.png" id="5_vhjva"]
-[ext_resource type="Script" path="res://texture_button_3.gd" id="6_ql4rb"]
+[ext_resource type="Script" uid="uid://dwtshxfpgxx8q" path="res://texture_button_3.gd" id="6_ql4rb"]
 [ext_resource type="Texture2D" uid="uid://qtk1sd1pjbc1" path="res://images/Название.png" id="8_0ql6g"]
+[ext_resource type="Texture2D" uid="uid://171o374g4wl5" path="res://титры.png" id="9_ql4rb"]
+[ext_resource type="Script" uid="uid://b6a0cw3h1ynn" path="res://texture_button_43.gd" id="10_0ql6g"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -56,6 +58,20 @@ position = Vector2(997, 150)
 scale = Vector2(8, 8)
 texture = ExtResource("8_0ql6g")
 
+[node name="TextureButton4" type="TextureButton" parent="."]
+offset_left = 1747.0
+offset_top = 1036.0
+offset_right = 1771.0
+offset_bottom = 1042.0
+scale = Vector2(7.185, 7.185)
+texture_normal = ExtResource("9_ql4rb")
+texture_pressed = ExtResource("9_ql4rb")
+texture_hover = ExtResource("9_ql4rb")
+texture_disabled = ExtResource("9_ql4rb")
+texture_focused = ExtResource("9_ql4rb")
+script = ExtResource("10_0ql6g")
+
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="TextureButton2" to="TextureButton2" method="_on_pressed"]
 [connection signal="pressed" from="TextureButton3" to="TextureButton3" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton4" to="TextureButton4" method="_on_pressed"]

@@ -24,13 +24,8 @@ shadow_size = 2
 script = ExtResource("1_1bvp3")
 
 [node name="ФонНочной2" type="Sprite2D" parent="."]
-position = Vector2(699, 1071)
+position = Vector2(699, 1196)
 scale = Vector2(5820.86, 406.033)
-texture = ExtResource("1_0xm2m")
-
-[node name="ФонНочной" type="Sprite2D" parent="."]
-position = Vector2(207, 155.5)
-scale = Vector2(2.63867, 2.63867)
 texture = ExtResource("1_0xm2m")
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]

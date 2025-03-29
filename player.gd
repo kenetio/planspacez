@@ -24,6 +24,7 @@ func _physics_process(delta):
 	
 	
 	move_and_slide()
+	$"НебаТу".rotation = -rotation
 	
 func shoot():
 	var b = bullet.instantiate()
